@@ -18,10 +18,25 @@ public class Main {
         int AreaOfDoors = NumberOfDoors*2;
         int NumberOfCoatsOnDoor = 2;
 
-        double RandomNumberForPainters = (Math.random()*5);
-        int NumberOfPainters = 1 + (int)RandomNumberForPainters;
+
         int HourlyLabourCost = 831;
-        double HoursWorked = (NumberOfWalls*2 +NumberOfDoors*0.5)/NumberOfPainters;
+        double HoursWorked = (NumberOfWalls*2 +NumberOfDoors*0.5);
+        int NumberOfPainters;
+
+        if (HoursWorked > 30) {
+
+            NumberOfPainters = 4;
+            HoursWorked = HoursWorked/4;
+        }
+        else if (HoursWorked>15){
+            NumberOfPainters = 2;
+            HoursWorked = HoursWorked/2;
+        }
+
+        else{
+            NumberOfPainters = 1;
+        }
+
         float LabourCost = (float)((NumberOfPainters*HourlyLabourCost*HoursWorked)/100);
 
         double AmountOfPaintForWalls10Litre = NumberOfCoatsOnWall*AreaOfWall*ThicknessOfPaint*100;
@@ -38,7 +53,13 @@ public class Main {
 
         System.out.println("\nTotal Cost: £" + (float)(PaintCost+LabourCost));
 
-        System.out.println("\nPlease pay within 5 working days if you wish to keep all your kneecaps :)");
+        int TimeTillPayed = 6;
+
+        String Threat = (TimeTillPayed > 5) ? "You are getting Knee Capped." : "Thank you. Have a nice day.";
+
+        System.out.println("\n" + Threat);
+
+
 
     }
 }
