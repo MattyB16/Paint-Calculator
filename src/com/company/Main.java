@@ -53,7 +53,8 @@ public class Main {
 
         System.out.println("\nTotal Cost: £" + (float)(PaintCost+LabourCost));
 
-        int TimeTillPayed = 6;
+
+        double TimeTillPayed = (Math.random()*15);
 
         String Threat = (TimeTillPayed > 5) ? "You are getting Knee Capped." : "Thank you. Have a nice day.";
 
