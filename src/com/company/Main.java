@@ -5,6 +5,7 @@ public class Main {
 
         int PaintPriceWallsPer10L = 60;
         int PaintPriceDoorsPer10L =40;
+        int PaintInStock =2;
 
         double ThicknessOfPaint = 0.0001;
 
@@ -41,9 +42,29 @@ public class Main {
 
         double AmountOfPaintForWalls10Litre = NumberOfCoatsOnWall*AreaOfWall*ThicknessOfPaint*100;
         double AmountOfPaintForDoors10Litre = NumberOfCoatsOnDoor*AreaOfDoors*ThicknessOfPaint*100;
-        double NumberOfPaintCansWalls = (int)Math.ceil(AmountOfPaintForWalls10Litre);
-        double NumberOfPaintCansDoors = (int)Math.ceil(AmountOfPaintForDoors10Litre);
+        int NumberOfPaintCansWalls = (int)Math.ceil(AmountOfPaintForWalls10Litre);
+        int NumberOfPaintCansDoors = (int)Math.ceil(AmountOfPaintForDoors10Litre);
+        int NumberOfPaintCans = NumberOfPaintCansWalls +NumberOfPaintCansDoors;
         float PaintCost = (float)(PaintPriceWallsPer10L*NumberOfPaintCansWalls + PaintPriceDoorsPer10L*NumberOfPaintCansDoors);
+
+        String Message;
+
+        switch(NumberOfPaintCans){
+            case 1,2:
+                Message = "We Have enough paint.";
+                break;
+
+
+            case 3,4:
+                Message = "Get 2 more cans.";
+                break;
+
+            default:
+                Message = "Fully Restock Paint";
+                break;
+        }
+
+        System.out.println(Message + "\n\n\n");
 
         System.out.println("Invoice from The Simple Mind Painting Company\n");
 
