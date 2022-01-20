@@ -18,7 +18,7 @@ public class Main {
         int AreaOfDoors = NumberOfDoors*2;
         int NumberOfCoatsOnDoor = 2;
 
-        double RandomNumberForPainters = (Math.random()*4);
+        double RandomNumberForPainters = (Math.random()*5);
         int NumberOfPainters = 1 + (int)RandomNumberForPainters;
         int HourlyLabourCost = 831;
         double HoursWorked = (NumberOfWalls*2 +NumberOfDoors*0.5)/NumberOfPainters;
@@ -30,9 +30,9 @@ public class Main {
         double NumberOfPaintCansDoors = (int)Math.ceil(AmountOfPaintForDoors10Litre);
         float PaintCost = (float)(PaintPriceWallsPer10L*NumberOfPaintCansWalls + PaintPriceDoorsPer10L*NumberOfPaintCansDoors);
 
-        System.out.println("Invoice from The Simple Mind Painting Company\n\n");
+        System.out.println("Invoice from The Simple Mind Painting Company\n");
 
-        System.out.println("Number of Walls: " + NumberOfWalls + "\nNumber of Doors: " + NumberOfDoors + "\nTotal Number Of Paint Cans needed: " + (int)(NumberOfPaintCansWalls+NumberOfPaintCansDoors) + "\nTotal Cost of Paint: £"  + PaintCost);
+        System.out.println("\nNumber of Walls: " + NumberOfWalls + "\nNumber of Doors: " + NumberOfDoors + "\nTotal Number Of Paint Cans needed: " + (int)(NumberOfPaintCansWalls+NumberOfPaintCansDoors) + "\nTotal Cost of Paint: £"  + PaintCost);
 
         System.out.println("\nNumber of Painters: " + NumberOfPainters + "\nHours Worked: " + HoursWorked + "\nLabour Cost: £" + (LabourCost));
 
