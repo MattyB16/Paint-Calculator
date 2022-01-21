@@ -56,7 +56,7 @@ public class Main {
 
 
             case 3,4:
-                Message = "Get 2 more cans.";
+                Message = "Get a few more cans.";
                 break;
 
             default:
