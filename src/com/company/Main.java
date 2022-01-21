@@ -22,7 +22,17 @@ public class Main {
 
         System.out.println("We are no longer hiring.");
 
-        System.out.println("Do you have a job?");
+        System.out.println("Our new employees are:");
+
+        String [] Employeenames = {"Matthew","Sam","Rhys","Mamoon","Nazmul"};
+
+        for (int j=0;j < Employeenames.length;j++){
+            System.out.println(Employeenames[j]);
+
+        }
+
+        System.out.println("Do you have a job for them?");
+
         HaveJob = Input.nextLine();
 
         while(HaveJob.contains("Y")) {
@@ -30,8 +40,6 @@ public class Main {
             System.out.println("Do you still Have a job?");
             HaveJob = Input.nextLine();
         }
-
-
 
 
         do {
@@ -104,7 +112,7 @@ public class Main {
 
             System.out.println("\nNumber of Painters: " + NumberOfPainters + "\nHours Worked: " + HoursWorked + "\nLabour Cost: £" + (LabourCost));
 
-            System.out.println("\nTotal Cost: £" + (float)(PaintCost+LabourCost));
+            System.out.println("\nTotal Cost: £" + (PaintCost+LabourCost));
 
 
             double TimeTillPayed = (Math.random()*15);
