@@ -3,10 +3,29 @@ package com.company;
 import java.util.Locale;
 import java.util.Scanner;
 
+
 public class Main {
+
+    public static void Greeting(){
+
+        System.out.println("Hello, hope you enjoy your day.");
+
+    }
+    public static int randomNumSize(int InNum){
+
+        double Num1 = Math.random()*InNum;
+        double Num2 = Math.ceil(Num1);
+        int Num3 = (int)Num2;
+        int OutNum = Num3;
+
+        return OutNum;
+    }
+
     public static void main(String[] args) {
 
+        Greeting();
 
+        System.out.println(randomNumSize(55));
 
         String AnotherQuote ="Yes";
 
@@ -31,7 +50,7 @@ public class Main {
             System.out.println(EmployeeNames[0][j] + " " + EmployeeNames[1][j]);
 
         }
-        
+
 
         System.out.println("Do you have a job for them?");
 
@@ -51,7 +70,7 @@ public class Main {
 
             double ThicknessOfPaint = 0.0001;
 
-            double RandomNumberForWalls = (Math.random()*40);
+            double RandomNumberForWalls = randomNumSize(40);
             int NumberOfWalls = 1 + (int)RandomNumberForWalls;
             int AverageAreaOfWall = 2*6;
             int AreaOfWall = NumberOfWalls*AverageAreaOfWall;
