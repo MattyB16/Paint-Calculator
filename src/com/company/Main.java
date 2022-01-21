@@ -24,12 +24,14 @@ public class Main {
 
         System.out.println("Our new employees are:");
 
-        String [] Employeenames = {"Matthew","Sam","Rhys","Mamoon","Nazmul"};
+        String [] [] EmployeeNames = {{"Matthew","Sam","Rhys","Mamoon","Nazmul"},{"Barker","Brierly","Meyer","Raghib","Hoque"}};
 
-        for (int j=0;j < Employeenames.length;j++){
-            System.out.println(Employeenames[j]);
+
+        for (int j=0;j < EmployeeNames[0].length;j++){
+            System.out.println(EmployeeNames[0][j] + " " + EmployeeNames[1][j]);
 
         }
+        
 
         System.out.println("Do you have a job for them?");
 
